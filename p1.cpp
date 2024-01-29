@@ -98,19 +98,6 @@ int character_class(string s){
         return 0;
     }
 }
-int n_times(string s, int len){
-
-    int n=s.length();
-    if (n!=len){
-        return 0;
-    }
-    for(int i=0;i<n;i++){
-        if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
-            return 0;
-        }
-    }
-    return 1;
-}
 int vowel_check(string s){
     int n=s.length();
     int flag=0;
@@ -127,14 +114,28 @@ int vowel_check(string s){
         return 1;
     }
 }
+int n_times(string s, int len){
+
+    int n=s.length();
+    if (n!=len){
+        return 0;
+    }
+    for(int i=0;i<n;i++){
+        if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+            return 0;
+        }
+    }
+    return 1;
+}
+
 
 int main(){
     string s;
     cin>>s;
     //int len; cin>>len; int flag=n_times(s,len);
-
     //int flag=once_or_not_at_all(s);
     //int flag=character_class(s);
+    //int flag=vowel_check(s);
  
     if(flag==1){
         cout<<"valid string"<<endl;
