@@ -1,0 +1,5 @@
+lex lex.lex
+yacc -d yaccfile.y
+gcc lex.yy.c y.tab.c  -o bijoy
+./bijoy
+```
